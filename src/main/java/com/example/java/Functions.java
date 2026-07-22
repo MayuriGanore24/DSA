@@ -26,4 +26,16 @@ public class Functions {
         }
         return sum;
     }
+    public static int countEvenNumbers(int arr[]){
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<0){
+                arr[i]=arr[i]*-1;
+            }
+            if(arr[i]%2==0&& arr[i]!=0){
+                count++;
+            }
+        }
+        return count;
+    }
 }

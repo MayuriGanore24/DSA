@@ -63,4 +63,20 @@ public class FunctionsTest {
         Assertions.assertEquals(0,sum);
     }
 
+
+    @Test
+    public void countOfEvenNumbersShouldBe2(){
+        int count=Functions.countEvenNumbers(new int[]{1,2,3,4,5});
+        Assertions.assertEquals(2,count);
+    }
+    @Test
+    public void countOfEvenNumbersShouldBe0(){
+        int count=Functions.countEvenNumbers(new int[]{0,3,5,7,9});
+        Assertions.assertEquals(0,count);
+    }
+    @Test
+    public void countOfEvenNumbersShouldBe3(){
+        int count=Functions.countEvenNumbers(new int[]{-1,-2,0,-3,4,-6});
+        Assertions.assertEquals(3,count);
+    }
 }
