@@ -79,4 +79,13 @@ public class FunctionsTest {
         int count=Functions.countEvenNumbers(new int[]{-1,-2,0,-3,4,-6});
         Assertions.assertEquals(3,count);
     }
+
+    @Test
+    public void linearSearchShouldReturnTrue(){
+        Assertions.assertTrue(Functions.linearSearch(new int[]{1,2,3,4,5},3));
+    }
+    @Test
+    public void linearSearchShouldReturnFalse(){
+        Assertions.assertFalse(Functions.linearSearch(new int[]{1,2,3,4,5},30));
+    }
 }
