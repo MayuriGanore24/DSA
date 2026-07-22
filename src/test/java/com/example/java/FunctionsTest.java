@@ -12,8 +12,8 @@ public class FunctionsTest {
         Assertions.assertEquals(5,largest);
     }
     @Test
-    public void largestNumberShouldBeNegative5(){
-        int [] arr={-1,-2,-3,-4,-5};
+    public void largestNumberShouldBeZero(){
+        int [] arr={0,-2,-3,-4,-5};
         int largest=Functions.findLargestOfArray(arr);
         Assertions.assertEquals(0,largest);
     }

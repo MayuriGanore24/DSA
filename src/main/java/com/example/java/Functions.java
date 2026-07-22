@@ -2,7 +2,7 @@ package com.example.java;
 
 public class Functions {
     public static int findLargestOfArray(int[]arr){
-        int largest=0;
+        int largest=arr[0];
         for(int i=0;i<arr.length;i++){
             if(arr[i]>largest){
                 largest=arr[i];
@@ -29,9 +29,6 @@ public class Functions {
     public static int countEvenNumbers(int arr[]){
         int count=0;
         for(int i=0;i<arr.length;i++){
-            if(arr[i]<0){
-                arr[i]=arr[i]*-1;
-            }
             if(arr[i]%2==0&& arr[i]!=0){
                 count++;
             }
