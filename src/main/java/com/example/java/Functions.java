@@ -1,0 +1,22 @@
+package com.example.java;
+
+public class Functions {
+    public static int findLargestOfArray(int[]arr){
+        int largest=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>largest){
+                largest=arr[i];
+            }
+        }
+        return largest;
+    }
+    public static int findSmallestOfArray(int[]arr){
+        int smallest=Integer.MAX_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<smallest){
+                smallest=arr[i];
+            }
+        }
+        return smallest;
+    }
+}
