@@ -28,4 +28,35 @@ public class Day2Test {
         day2.reverseArrayInPlace(arr);
         Assertions.assertEquals(10,arr[0]);
     }
+
+
+    @Test
+    public void secondLargestInArrayShouldReturn4(){{
+        int arr[]={1,2,3,4};
+        Day2 day2=new Day2();
+        int secondLargest=day2.secondLargestInArray(arr);
+        Assertions.assertEquals(3,secondLargest);
+    }
+}
+    @Test
+    public void secondLargestInArrayShouldReturnNegative2(){
+        int arr[]={-1,-2,-3,-4};
+        Day2 day2=new Day2();
+        int secondLargest=day2.secondLargestInArray(arr);
+        Assertions.assertEquals(-2,secondLargest);
+    }
+    @Test
+    public void secondLargestInArrayShouldReturnZeroForEmptyArray(){
+        int arr[]={};
+        Day2 day2=new Day2();
+        int secondLargest=day2.secondLargestInArray(arr);
+        Assertions.assertEquals(Integer.MIN_VALUE,secondLargest);
+    }
+    @Test
+    public void secondLargestInArrayShouldReturnTwenty(){
+        int arr[]={30,30,20};
+        Day2 day2=new Day2();
+        int secondLargest=day2.secondLargestInArray(arr);
+        Assertions.assertEquals(20,secondLargest);
+    }   
 }
