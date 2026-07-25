@@ -109,4 +109,19 @@ public class Day2Test {
         int[] result=day2.moveZerosToEnd(arr);
         Assertions.assertArrayEquals(new int[]{0},result);
     }
+
+    @Test
+    public void removeDuplicatesShouldReturnLengthOfArrayWithoutDuplicatesAs3(){
+        Day2 day2=new Day2();
+        int arr[]={1,1,2,2,3,3};
+        int length=day2.removeDuplicates(arr);
+        Assertions.assertEquals(3,length);
+    }
+    @Test
+    public void removeDuplicatesShouldReturnLengthOfArrayWithoutDuplicatesAs0ForEmptyArray(){
+        Day2 day2=new Day2();
+        int arr[]={};
+        int length=day2.removeDuplicates(arr);
+        Assertions.assertEquals(0,length);
+    }
 }

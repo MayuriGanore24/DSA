@@ -59,4 +59,23 @@ public class Day2 {
         }
         return arr;
     }
+    public int removeDuplicates(int[] arr){
+        if(arr.length<2){
+            return 0;
+        }
+        int i=0;
+        int j=1;
+        int index=1;
+        while(j<arr.length){
+            if(arr[i]==arr[j])
+                j++;
+            else{
+                arr[index]=arr[j];
+                i=j;
+                j++;
+                index++;
+            }
+        }
+        return index;
+    }
 }
