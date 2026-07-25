@@ -35,4 +35,13 @@ public class Day2 {
         }
         return secondLargest;
     }
+    public boolean checkIfArrayIsSorted(int arr[]){
+        if(arr.length<2)
+            return true;
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]>arr[i+1])
+                return false;
+        }
+        return true;
+    }
 }

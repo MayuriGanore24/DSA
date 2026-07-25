@@ -59,4 +59,26 @@ public class Day2Test {
         int secondLargest=day2.secondLargestInArray(arr);
         Assertions.assertEquals(20,secondLargest);
     }   
+
+
+    @Test
+    public void checkIfArrayIsSortedShouldReturnTrue(){
+        Day2 day2=new Day2();
+        Assertions.assertTrue(day2.checkIfArrayIsSorted(new int[]{1,2,3,4,5}));
+    }
+    @Test
+    public void checkIfArrayIsSortedShouldReturnFalse(){
+        Day2 day2=new Day2();
+        Assertions.assertFalse(day2.checkIfArrayIsSorted(new int[]{1,9,4,5}));
+    }
+    @Test
+    public void checkIfArrayIsSortedShouldReturnTrueForEmptyArray(){
+        Day2 day2=new Day2();
+        Assertions.assertTrue(day2.checkIfArrayIsSorted(new int[]{}));
+    }
+    @Test
+    public void checkIfArrayIsSortedShouldReturnTrueForArrayWithOneElement(){
+        Day2 day2=new Day2();
+        Assertions.assertTrue(day2.checkIfArrayIsSorted(new int[]{2}));
+    }
 }
