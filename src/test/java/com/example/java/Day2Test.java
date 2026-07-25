@@ -81,4 +81,32 @@ public class Day2Test {
         Day2 day2=new Day2();
         Assertions.assertTrue(day2.checkIfArrayIsSorted(new int[]{2}));
     }
+    @Test
+    public void checkIfArrayIsSortedShouldReturnTrueForArrayWithDuplicateElements(){
+        Day2 day2=new Day2();
+        Assertions.assertTrue(day2.checkIfArrayIsSorted(new int[]{2,2}));
+    }
+
+
+    @Test 
+    public void moveZerosToEndShouldReturn123000(){
+        Day2 day2=new Day2();
+        int arr[]={1,0,2,0,3,0};
+        int[] result=day2.moveZerosToEnd(arr);
+        Assertions.assertArrayEquals(new int[]{1,2,3,0,0,0},result);
+    }
+    @Test 
+    public void moveZerosToEndShouldReturn123(){
+        Day2 day2=new Day2();
+        int arr[]={1,2,3};
+        int[] result=day2.moveZerosToEnd(arr);
+        Assertions.assertArrayEquals(new int[]{1,2,3},result);
+    }
+    @Test 
+    public void moveZerosToEndShouldReturn0(){
+        Day2 day2=new Day2();
+        int arr[]={0};
+        int[] result=day2.moveZerosToEnd(arr);
+        Assertions.assertArrayEquals(new int[]{0},result);
+    }
 }

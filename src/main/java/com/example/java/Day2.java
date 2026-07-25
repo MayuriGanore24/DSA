@@ -44,4 +44,19 @@ public class Day2 {
         }
         return true;
     }
+    public int[] moveZerosToEnd(int arr[]){
+        if(arr.length<2)
+            return arr;
+        int index=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=0){
+                arr[index]=arr[i];
+                index++;
+            }
+        }
+        for(int i=index+1;i<arr.length;i++){
+            arr[i]=0;
+        }
+        return arr;
+    }
 }
