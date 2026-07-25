@@ -54,15 +54,16 @@ public class Day2 {
                 index++;
             }
         }
-        for(int i=index+1;i<arr.length;i++){
+        for(int i=index;i<arr.length;i++){
             arr[i]=0;
         }
         return arr;
     }
     public int removeDuplicates(int[] arr){
-        if(arr.length<2){
+        if(arr.length==0)
             return 0;
-        }
+        if(arr.length==1)
+            return 1;
         int i=0;
         int j=1;
         int index=1;
