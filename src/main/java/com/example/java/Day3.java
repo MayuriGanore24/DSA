@@ -12,4 +12,14 @@ public class Day3 {
         arr[arr.length-1]=key;
         return arr;
     }
+    public static int[] rightRotateByOne(int arr[]){
+        if(arr.length<2)
+            return arr;
+        int key =arr[arr.length-1];
+        for(int i=arr.length-1;i>0;i--){
+            arr[i]=arr[i-1];
+        }
+        arr[0]=key;
+        return arr;
+     }
 }

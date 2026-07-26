@@ -27,5 +27,26 @@ public class Day3Test {
         day3.leftRotateByOne(arr);
         Assertions.assertEquals(0,arr.length);
     }
+    @Test
+    public void rightRotateByOneShouldReturn4123(){
+        int arr[]={1,2,3,4};
+        Day3.rightRotateByOne(arr);
+        Assertions.assertEquals(4,arr[0]);
+        Assertions.assertEquals(1,arr[1]);
+        Assertions.assertEquals(2,arr[2]);
+        Assertions.assertEquals(3,arr[3]);
+    }
+    @Test
+    public void rightRotateByOneShouldReturn1ForSingleElement(){
+        int arr[]={1};
+        Day3.rightRotateByOne(arr);
+        Assertions.assertEquals(1,arr[0]);
+    }
+    @Test
+    public void rightRotateByOneShouldReturnEmptyArray(){
+        int arr[]={};
+        Day3.rightRotateByOne(arr);
+        Assertions.assertEquals(0,arr.length);
+    }    
 }   
 
