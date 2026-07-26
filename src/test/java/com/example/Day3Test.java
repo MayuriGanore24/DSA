@@ -7,24 +7,24 @@ import org.junit.jupiter.api.Test;
 public class Day3Test {
     Day3 day3=new Day3();
     @Test
-    public void rightRotateByOneShouldReturn2341(){
+    public void leftRotateByOneShouldReturn2341(){
         int arr[]={1,2,3,4};
-        day3.rightRotateByOne(arr);
+        day3.leftRotateByOne(arr);
         Assertions.assertEquals(2,arr[0]);
         Assertions.assertEquals(3,arr[1]);
         Assertions.assertEquals(4,arr[2]);
         Assertions.assertEquals(1,arr[3]);
     }
     @Test
-    public void rightRotateByOneShouldReturn1ForSingleElement(){
+    public void leftRotateByOneShouldReturn1ForSingleElement(){
         int arr[]={1};
-        day3.rightRotateByOne(arr);
+        day3.leftRotateByOne(arr);
         Assertions.assertEquals(1,arr[0]);
     }
     @Test
-    public void rightRotateByOneShouldReturnEmptyArray(){
+    public void leftRotateByOneShouldReturnEmptyArray(){
         int arr[]={};
-        day3.rightRotateByOne(arr);
+        day3.leftRotateByOne(arr);
         Assertions.assertEquals(0,arr.length);
     }
 }   

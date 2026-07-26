@@ -1,7 +1,7 @@
 package com.example.java;
 
 public class Day3 {
-    public int[] rightRotateByOne(int arr[]){
+    public int[] leftRotateByOne(int arr[]){
         if(arr.length<2)
             return arr;
             
