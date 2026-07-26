@@ -73,5 +73,26 @@ public class Day3Test {
         boolean result=day3.isPalindrome(input);
         Assertions.assertTrue(result);
     }
+    @Test
+    public void isAnagramShouldReturnTrueForListenAndSilent(){
+        String str1="Listen";
+        String str2="Silent";
+        boolean result=day3.isAnagram(str1,str2);
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void isAnagramShouldReturnFalseForHelloAndWorld(){
+        String str1="Hello";
+        String str2="World";      
+        boolean result=day3.isAnagram(str1,str2);
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void isAnagramShouldReturnTrueForEmptyStrings(){
+        String str1="";
+        String str2="";      
+        boolean result=day3.isAnagram(str1,str2);
+        Assertions.assertTrue(result);
+    }
 }   
 
