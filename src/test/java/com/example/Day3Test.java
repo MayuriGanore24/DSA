@@ -30,7 +30,7 @@ public class Day3Test {
     @Test
     public void rightRotateByOneShouldReturn4123(){
         int arr[]={1,2,3,4};
-        Day3.rightRotateByOne(arr);
+        day3.rightRotateByOne(arr);
         Assertions.assertEquals(4,arr[0]);
         Assertions.assertEquals(1,arr[1]);
         Assertions.assertEquals(2,arr[2]);
@@ -39,14 +39,39 @@ public class Day3Test {
     @Test
     public void rightRotateByOneShouldReturn1ForSingleElement(){
         int arr[]={1};
-        Day3.rightRotateByOne(arr);
+        day3.rightRotateByOne(arr);
         Assertions.assertEquals(1,arr[0]);
     }
     @Test
     public void rightRotateByOneShouldReturnEmptyArray(){
         int arr[]={};
-        Day3.rightRotateByOne(arr);
+        day3.rightRotateByOne(arr);
         Assertions.assertEquals(0,arr.length);
     }    
+
+    @Test
+    public void isPalindromeShouldReturnTrueForMadam(){
+        String input="madam";
+        boolean result=day3.isPalindrome(input);
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void isPalindromeShouldReturnFalseForHello(){
+        String input="hello";
+        boolean result=day3.isPalindrome(input);
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void isPalindromeShouldReturnTrueForSingleCharacter(){
+        String input="a";
+        boolean result=day3.isPalindrome(input);
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void isPalindromeShouldReturnTrueForEmptyString(){
+        String input="";
+        boolean result=day3.isPalindrome(input);
+        Assertions.assertTrue(result);
+    }
 }   
 

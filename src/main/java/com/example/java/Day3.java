@@ -12,7 +12,7 @@ public class Day3 {
         arr[arr.length-1]=key;
         return arr;
     }
-    public static int[] rightRotateByOne(int arr[]){
+    public int[] rightRotateByOne(int arr[]){
         if(arr.length<2)
             return arr;
         int key =arr[arr.length-1];
@@ -21,5 +21,18 @@ public class Day3 {
         }
         arr[0]=key;
         return arr;
+     }
+     public boolean isPalindrome(String input){
+        if(input.length()<=2)
+            return true;
+        int i=0;
+        int j=input.length()-1;
+        while(i<j){
+            if(input.charAt(i)!=input.charAt(j))
+                return false;
+            i++;
+            j--;
+        }
+        return true;
      }
 }
