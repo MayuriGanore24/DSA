@@ -53,4 +53,22 @@ public class Day3 {
          }
          return true;
      }
+     public String reverseString(String input){
+         input=input.replaceAll("//s","").toLowerCase();
+         if(input.length()<2){
+             return input;
+         }
+         char []arr=input.toCharArray();
+         int i=0;
+         int j=arr.length-1;
+         while(i<j){
+             char temp=arr[i];
+             arr[i]=arr[j];
+             arr[j]=temp;
+             i++;
+             j--;
+         }
+         input=new String(arr);
+         return input;
+     }
 }

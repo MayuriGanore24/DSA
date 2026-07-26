@@ -94,5 +94,24 @@ public class Day3Test {
         boolean result=day3.isAnagram(str1,str2);
         Assertions.assertTrue(result);
     }
-}   
+
+    @Test
+    public void reverseStringShouldReturnOllehForHello(){
+        String input="Hello";
+        String result=day3.reverseString(input);
+        Assertions.assertEquals("olleh",result);
+    }
+    @Test
+    public void reverseStringShouldReturnEmptyStringForEmptyInput(){
+        String input="";
+        String result=day3.reverseString(input);
+        Assertions.assertEquals("",result);
+    }
+    @Test
+    public void reverseStringShouldReturnAForSingleCharacter(){
+        String input="A";
+        String result=day3.reverseString(input);
+        Assertions.assertEquals("a",result);
+    }
+}
 
