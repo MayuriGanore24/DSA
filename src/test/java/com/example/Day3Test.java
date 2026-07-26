@@ -51,7 +51,7 @@ public class Day3Test {
 
     @Test
     public void isPalindromeShouldReturnTrueForMadam(){
-        String input="madam";
+        String input="Madam";
         boolean result=day3.isPalindrome(input);
         Assertions.assertTrue(result);
     }

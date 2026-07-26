@@ -23,6 +23,7 @@ public class Day3 {
         return arr;
      }
      public boolean isPalindrome(String input){
+        input=input.toLowerCase();
         if(input.length()<=2)
             return true;
         int i=0;
