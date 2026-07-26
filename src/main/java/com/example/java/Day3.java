@@ -24,7 +24,7 @@ public class Day3 {
      }
      public boolean isPalindrome(String input){
         input=input.toLowerCase();
-        if(input.length()<=2)
+        if(input.length()<1)
             return true;
         int i=0;
         int j=input.length()-1;
@@ -37,8 +37,8 @@ public class Day3 {
         return true;
      }
      public boolean isAnagram(String str1,String str2){
-         str1=str1.replaceAll("//s","").toLowerCase();
-         str2=str2.replaceAll("//s","").toLowerCase();
+         str1=str1.replaceAll("\\s","").toLowerCase();
+         str2=str2.replaceAll("\\s","").toLowerCase();
          if(str1.length()!=str2.length()){
              return false;
          }
@@ -54,7 +54,7 @@ public class Day3 {
          return true;
      }
      public String reverseString(String input){
-         input=input.replaceAll("//s","").toLowerCase();
+         input=input.replaceAll("\\s","").toLowerCase();
          if(input.length()<2){
              return input;
          }
