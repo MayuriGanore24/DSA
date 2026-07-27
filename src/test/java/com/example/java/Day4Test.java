@@ -34,4 +34,23 @@ public class Day4Test {
         boolean result=day4.containsDuplicate(arr);
         Assertions.assertFalse(result);     
     }
+
+    @Test
+    public void firstDuplicateShouldReturn1For1231(){
+        int arr[]={1,2,3,1};
+        int result=day4.firstDuplicate(arr);
+        Assertions.assertEquals(1,result);
+    }
+    @Test
+    public void firstDuplicateShouldReturnMinus1For1234(){
+        int arr[]={1,2,3,4};
+        int result=day4.firstDuplicate(arr);
+        Assertions.assertEquals(-1,result);
+    }
+    @Test
+    public void firstDuplicateShouldReturnMinus1ForEmptyArray(){
+        int arr[]={};
+        int result=day4.firstDuplicate(arr);
+        Assertions.assertEquals(-1,result);
+    }
 }

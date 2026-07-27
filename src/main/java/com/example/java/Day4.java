@@ -20,5 +20,14 @@ public class Day4 {
         }
         return false;
     }
+    public int firstDuplicate(int[] arr){
+        HashSet<Integer>set=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            if(set.add(arr[i])==false){
+                return arr[i];
+            }
+        }
+        return -1;
+    }
     
 }
