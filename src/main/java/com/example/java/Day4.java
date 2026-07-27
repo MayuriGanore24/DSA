@@ -10,5 +10,15 @@ public class Day4 {
         }
         return set.size();
     }
+
+    public boolean containsDuplicate(int[] arr){
+        HashSet<Integer>set=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            if(set.add(arr[i])==false){
+                return true;
+            }
+        }
+        return false;
+    }
     
 }
