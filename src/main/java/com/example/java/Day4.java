@@ -43,4 +43,26 @@ public class Day4 {
         }
         return false;
     }
+    public static int longestConsecutive(int[] arr){
+        if(arr.length<1)
+            return 0;
+        HashSet <Integer>set=new HashSet<>();
+        for(int num:arr){
+            set.add(num);
+        }
+        int longestStreak=0;
+        int currentStreak=0;
+        for(int i=0;i<arr.length;i++){
+            if(!set.contains(arr[i]-1)){
+                int start=arr[i];
+                currentStreak=1;
+                while(set.contains(start+1)){
+                    start++;
+                    currentStreak++;
+                }
+                longestStreak = Math.max(longestStreak, currentStreak);
+            }
+        }
+        return longestStreak;
+    }
 }

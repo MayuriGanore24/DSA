@@ -1,6 +1,8 @@
 package com.example.java;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import net.bytebuddy.asm.Advice.Thrown;
 public class Day4Test {
     Day4 day4=new Day4();
     @org.junit.jupiter.api.Test
@@ -74,5 +76,25 @@ public class Day4Test {
         int arr2[]={};
         boolean result=day4.hasCommonElement(arr1,arr2);
         Assertions.assertFalse(result);
+    }
+
+
+    @Test
+    public void longestConsecutiveShouldReturn4For100200300400500(){
+        int arr[]={100,200,300,400,500};
+        int result=Day4.longestConsecutive(arr);
+        Assertions.assertEquals(1,result);
+    }
+    @Test
+    public void longestConsecutiveShouldReturn5For12345(){
+        int arr[]={1,2,3,4,5};  
+        int result=Day4.longestConsecutive(arr);
+        Assertions.assertEquals(5,result);
+    }
+    @Test
+    public void longestConsecutiveShouldReturn0ForEmptyArray(){
+        int arr[]={};
+        int result=Day4.longestConsecutive(arr);
+        Assertions.assertEquals(0,result);
     }
 }
