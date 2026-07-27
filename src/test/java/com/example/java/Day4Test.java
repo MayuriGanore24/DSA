@@ -53,4 +53,26 @@ public class Day4Test {
         int result=day4.firstDuplicate(arr);
         Assertions.assertEquals(-1,result);
     }
+
+    @Test
+    public void hasCommonElementShouldReturnTrueFor123And345(){
+        int arr1[]={1,2,3};
+        int arr2[]={3,4,5};
+        boolean result=day4.hasCommonElement(arr1,arr2);
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void hasCommonElementShouldReturnFalseFor123And456(){
+        int arr1[]={1,2,3};
+        int arr2[]={4,5,6};
+        boolean result=day4.hasCommonElement(arr1,arr2);
+        Assertions.assertFalse(result);
+    }
+    @Test
+    public void hasCommonElementShouldReturnFalseForEmptyArrays(){
+        int arr1[]={};      
+        int arr2[]={};
+        boolean result=day4.hasCommonElement(arr1,arr2);
+        Assertions.assertFalse(result);
+    }
 }

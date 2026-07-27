@@ -29,5 +29,18 @@ public class Day4 {
         }
         return -1;
     }
-    
+     public boolean hasCommonElement(int[] arr1, int[] arr2){
+        HashSet<Integer>set=new HashSet<>();
+        if(arr1.length==0 || arr2.length==0){
+            return false;
+        }
+        for(int i=0;i<arr1.length;i++){
+            set.add(arr1[i]);
+        }
+        for(int i=0;i<arr2.length;i++){
+           if(set.add(arr2[i])==false)
+               return true;
+        }
+        return false;
+    }
 }
