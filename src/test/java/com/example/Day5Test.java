@@ -3,6 +3,7 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import com.Day5;
 import java.util.HashMap;
+import java.util.HashSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Day5Test {
     @Test
@@ -67,5 +68,32 @@ public class Day5Test {
         Day5 day5=new Day5();
         HashMap<String,Integer>result=day5.getFrequencyCountOfWords("");
         assertEquals(null,result); 
+    }
+
+
+    @Test
+    public void testGetUniqueNumbersShouldReturnCorrectUniqueNumbers(){
+        Day5 day5=new Day5();
+        int arr[]={1,2,3,2,1};
+        HashSet<Integer>result=day5.getUniqueNumbers(arr);
+        assertEquals(3,result.size());
+        assertEquals(true,result.contains(1));
+        assertEquals(true,result.contains(2));
+        assertEquals(true,result.contains(3));
+    }
+    @Test
+    public void testGetUniqueNumbersShouldReturnNullForEmptyArray(){
+        Day5 day5=new Day5();
+        int arr[]={};
+        HashSet<Integer>result=day5.getUniqueNumbers(arr);
+        assertEquals(null,result);
+    }
+    @Test
+    public void testGetUniqueNumbersShouldReturnSetWithOneElementForArrayWithOneElement(){
+        Day5 day5=new Day5();
+        int arr[]={5};
+        HashSet<Integer>result=day5.getUniqueNumbers(arr);
+        assertEquals(1,result.size());
+        assertEquals(true,result.contains(5));
     }
 }

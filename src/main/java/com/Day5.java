@@ -1,6 +1,7 @@
 package com;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Day5 {
     public HashMap<Character,Integer>countVowels(String input){
@@ -41,5 +42,14 @@ public class Day5 {
         }
         return map;
     }
-    
+    public HashSet<Integer> getUniqueNumbers(int arr[]){
+        if(arr.length<1){
+            return null;
+        }
+        HashSet<Integer>set=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            set.add(arr[i]);
+        }
+        return set;
+    }
 }
