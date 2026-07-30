@@ -52,4 +52,14 @@ public class Day5 {
         }
         return set;
     }
+    public HashSet<Character>getUniqueCharacters(String input){
+        if(input.isEmpty()){
+            return null;
+        }
+        HashSet<Character>set=new HashSet<>();
+        for(int i=0;i<input.length();i++){
+            set.add(input.charAt(i));
+        }
+        return set;
+    }
 }

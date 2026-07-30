@@ -96,4 +96,23 @@ public class Day5Test {
         assertEquals(1,result.size());
         assertEquals(true,result.contains(5));
     }
+
+    @Test
+    public void testGetUniqueCharactersShouldReturnCorrectUniqueCharacters(){
+        Day5 day5=new Day5();
+        String input="hello";
+        HashSet<Character>result=day5.getUniqueCharacters(input);
+        assertEquals(4,result.size());
+        assertEquals(true,result.contains('h'));
+        assertEquals(true,result.contains('e'));
+        assertEquals(true,result.contains('l'));
+        assertEquals(true,result.contains('o'));
+    }
+    @Test
+    public void testGetUniqueCharactersShouldReturnNullForEmptyString(){
+        Day5 day5=new Day5();
+        String input="";
+        HashSet<Character>result=day5.getUniqueCharacters(input);
+        assertEquals(null,result);    
+    }
 }
