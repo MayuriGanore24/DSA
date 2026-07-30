@@ -17,5 +17,19 @@ public class Day5 {
         }
         return map;
     }
+
+    public HashMap<String,Integer>getStudentsWithMarksGreaterThan80(HashMap<String,Integer>students){
+        if(students.isEmpty()){
+            return null;
+        }
+        HashMap<String,Integer>map=new HashMap<>();
+        for(HashMap.Entry<String,Integer>student:students.entrySet()){
+            if(student.getValue()>80){
+                map.put(student.getKey(),student.getValue());
+            }
+        }
+        return map;
+        
+    }
     
 }
