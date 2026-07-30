@@ -54,4 +54,18 @@ public class Day5Test {
         HashMap<String,Integer>result=day5.getStudentsWithMarksGreaterThan80(students);
         assertEquals(0,result.size());
     }
+
+    @Test
+    public void testGetFrequencyCountOfWordsShouldReturnCorrectCounts(){
+        Day5 day5=new Day5();
+        HashMap<String,Integer>result=day5.getFrequencyCountOfWords("hello world hello");
+        assertEquals(2,result.get("hello"));
+        assertEquals(1,result.get("world"));
+    }
+    @Test
+    public void testGetFrequencyCountOfWordsShouldReturnNullForEmptyString(){
+        Day5 day5=new Day5();
+        HashMap<String,Integer>result=day5.getFrequencyCountOfWords("");
+        assertEquals(null,result); 
+    }
 }

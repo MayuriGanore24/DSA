@@ -28,8 +28,18 @@ public class Day5 {
                 map.put(student.getKey(),student.getValue());
             }
         }
+        return map;   
+    }
+    public HashMap<String,Integer>getFrequencyCountOfWords(String input){
+        if(input.isEmpty())
+            return null;
+        String []words=input.split(" ");
+        HashMap<String,Integer>map=new HashMap<>();
+        for(int i=0;i<words.length;i++){
+            String word=words[i];
+            map.put(word,map.getOrDefault(word,0)+1);
+        }
         return map;
-        
     }
     
 }
