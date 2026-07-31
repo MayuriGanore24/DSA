@@ -20,4 +20,19 @@ public class Day6Tests {
         HashMap<String,Integer>result=day6.getCountOfEvenOddNumbers(input);
         assertEquals(null,result);
     }
+
+    @Test
+    public void testGetMaxFrequencyCharacterShouldReturnCorrectCharacter(){
+        Day6 day6=new Day6();
+        String input="hello world";
+        Character result=day6.getMaxFrequencyCharacter(input);
+        assertEquals('l',result);
+    }
+    @Test
+    public void testGetMaxFrequencyCharacterShouldReturnNullForEmptyString(){
+        Day6 day6=new Day6();   
+        String input="";
+        Character result=day6.getMaxFrequencyCharacter(input);
+        assertEquals(null,result);
+    }
 }
