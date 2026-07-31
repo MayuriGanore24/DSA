@@ -1,5 +1,6 @@
 package com.example.java;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Day6 {
@@ -39,5 +40,23 @@ public class Day6 {
             }
         }
         return key;
+    }
+    public ArrayList<Character> getDuplicateCharacters(String input){
+        if(input==null || input.length()==0){
+            return null;
+        }
+        input=input.toLowerCase();
+        HashMap <Character,Integer> map=new HashMap<>();
+        for(int i=0;i<input.length();i++){
+            Character ch=input.charAt(i);
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+        ArrayList <Character>ans=new ArrayList<>();
+        for(HashMap.Entry<Character,Integer>entry:map.entrySet()){
+            if(entry.getValue()>1){
+                ans.add(entry.getKey());
+            }
+        }
+        return ans;
     }
 }

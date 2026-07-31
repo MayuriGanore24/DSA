@@ -35,4 +35,19 @@ public class Day6Tests {
         Character result=day6.getMaxFrequencyCharacter(input);
         assertEquals(null,result);
     }
+
+
+    @Test
+    public void testGetDuplicateCharactersShouldReturnCorrectCharacters(){
+        Day6 day6=new Day6();
+        String input="hello world";
+        assertEquals(true,day6.getDuplicateCharacters(input).contains('l'));
+        assertEquals(true,day6.getDuplicateCharacters(input).contains('o'));
+    }
+    @Test
+    public void testGetDuplicateCharactersShouldReturnNullForEmptyString(){
+        Day6 day6=new Day6();
+        String input="";
+        assertEquals(null,day6.getDuplicateCharacters(input)); 
+    }
 }
