@@ -3,6 +3,7 @@ package com;
 import org.junit.jupiter.api.Test;
 import com.example.java.Day6;
 import java.util.HashMap;
+import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Day6Tests {
     @Test
@@ -49,5 +50,24 @@ public class Day6Tests {
         Day6 day6=new Day6();
         String input="";
         assertEquals(null,day6.getDuplicateCharacters(input)); 
+    }
+
+
+    @Test
+    public void twoSumShouldReturn0and1WhenTargetIs9(){
+        Day6 day6=new Day6();
+        int input[]={2,7,11,15};
+        int target=9;
+        ArrayList<Integer>result=day6.twoSum(input,target);
+        assertEquals(0,result.get(0));
+        assertEquals(1,result.get(1));
+    }
+    @Test
+    public void twoSumShouldReturnEmptyArrayListWhenNoSolutionExists(){
+        Day6 day6=new Day6();
+        int input[]={1,2,3};
+        int target=7;
+        ArrayList<Integer>result=day6.twoSum(input,target);
+        assertEquals(0,result.size());
     }
 }

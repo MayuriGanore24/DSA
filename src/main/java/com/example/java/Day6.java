@@ -59,4 +59,21 @@ public class Day6 {
         }
         return ans;
     }
-}
+    public ArrayList<Integer>twoSum(int arr[],int target){
+        if(arr==null || arr.length==0){
+            return null;
+        }
+        ArrayList<Integer>result=new ArrayList<>();
+        HashMap<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            int complement=target-arr[i];
+            if(map.containsKey(complement)){
+                result.add(map.get(complement));
+                result.add(i);
+                return result;
+            }
+            map.put(arr[i],i);
+        }
+        return result;
+    }
+} 
