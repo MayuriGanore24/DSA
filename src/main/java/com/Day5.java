@@ -1,5 +1,6 @@
 package com;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -52,14 +53,21 @@ public class Day5 {
         }
         return set;
     }
-    public HashSet<Character>getUniqueCharacters(String input){
+    public ArrayList<Character> getUniqueCharacters(String input){
         if(input.isEmpty()){
             return null;
         }
-        HashSet<Character>set=new HashSet<>();
+        HashMap<Character,Integer>map=new HashMap<>();
         for(int i=0;i<input.length();i++){
-            set.add(input.charAt(i));
+            char ch=input.charAt(i);
+            map.put(ch,map.getOrDefault(ch,0)+1);
         }
-        return set;
+        ArrayList<Character>result=new ArrayList<>();
+        for(HashMap.Entry<Character,Integer>entry:map.entrySet()){
+            if(entry.getValue()==1){
+                result.add(entry.getKey());
+            }
+        }
+        return result;
     }
 }

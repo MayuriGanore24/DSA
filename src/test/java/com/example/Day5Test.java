@@ -2,6 +2,8 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 import com.Day5;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -101,18 +103,17 @@ public class Day5Test {
     public void testGetUniqueCharactersShouldReturnCorrectUniqueCharacters(){
         Day5 day5=new Day5();
         String input="hello";
-        HashSet<Character>result=day5.getUniqueCharacters(input);
-        assertEquals(4,result.size());
+        ArrayList<Character>result=day5.getUniqueCharacters(input);
+        assertEquals(3,result.size());
         assertEquals(true,result.contains('h'));
         assertEquals(true,result.contains('e'));
-        assertEquals(true,result.contains('l'));
         assertEquals(true,result.contains('o'));
     }
     @Test
     public void testGetUniqueCharactersShouldReturnNullForEmptyString(){
         Day5 day5=new Day5();
         String input="";
-        HashSet<Character>result=day5.getUniqueCharacters(input);
+        ArrayList<Character>result=day5.getUniqueCharacters(input);
         assertEquals(null,result);    
     }
 }
